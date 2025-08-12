@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Malekah Tantoura </title>
+
+<style>
+/* General */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff0f6;
+  color: #4a0072;
+}
+
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #ff80ab;
+  color: white;
+  z-index: 1000;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.navbar li {
+  margin: 0 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #ffd6e7;
+}
+
+/* Hero Video */
+#heroVideo {
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+.video-overlay-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3em;
+  font-weight: bold;
+  text-shadow: 2px 2px 10px #000;
+}
+
+/* Columns */
+.columns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 1;
+  padding: 20px;
+  max-width: 400px;
+}
+
+.left {
+  color: #4a0072;
+  font-size: 1.1em;
+}
+
+.right .profile-img {
+  width: 100%;
+  border-radius: 20px;
+  display: block;
+  margin: 0 auto;
+  filter: brightness(95%) contrast(110%) saturate(120%);
+}
+
+/* Table */
+table {
+  width: 60%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  font-size: 1em;
+}
+
+th, td {
+  border: 2px solid #ff80ab;
+  padding: 10px;
+}
+
+th {
+  background-color: #ffc1e3;
+}
+
+/* Image with Text Overlay */
+.image-text-container {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.image-text-container img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  font-size: 2em;
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 10px #000;
+}
+
+/* Hover paragraph */
+.hover-p {
+  font-size: 1.2em;
+  transition: all 0.3s ease;
+}
+
+.hover-p:hover {
+  color: #d500f9;
+  transform: scale(1.05);
+}
+
+/* Fade Overlay */
+.fade-container {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.fade-img {
+  width: 100%;
+  transition: 0.5s ease;
+  border-radius: 10px;
+}
+
+.fade-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2em;
+  opacity: 0;
+  transition: 0.5s ease;
+  text-shadow: 1px 1px 6px #000;
+}
+
+.fade-container:hover .fade-img {
+  opacity: 0.5;
+}
+
+.fade-container:hover .fade-text {
+  opacity: 1;
+}
+
+/* Footer */
+footer {
+  background-color: #ff80ab;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-weight: bold;
+}
+
+</style>
+</head>
+<body>
+
+  <!-- Fixed Navbar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero with Autoplay Video -->
+  <header id="home">
+    <video autoplay muted loop id="heroVideo">
+      <source src="https://cdn.pixabay.com/video/2016/01/05/1844-150885307_tiny.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="video-overlay-text">Hi, I'm Malekah Tantoura 💫</div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <div class="columns">
+      <div class="column left">
+        <p>Hello! I’m Malekah Tantoura, a passionate student learning to create beautiful websites. I love design, code, and creativity.</p>
+      </div>
+      <div class="column right">
+        <img src="https://cdn.pixabay.com/photo/2023/07/19/05/54/european-shorthair-8136129_1280.jpg" alt="Malekah Tantoura" class="profile-img" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Table Section -->
+  <section class="section">
+    <h2>My Skills</h2>
+    <table>
+      <tr>
+        <th>Skill</th>
+        <th>Level</th>
+      </tr>
+      <tr>
+        <td>HTML</td>
+        <td>Advanced</td>
+      </tr>
+      <tr>
+        <td>CSS</td>
+        <td>Intermediate</td>
+      </tr>
+     
+    </table>
+  </section>
+
+  <!-- Text Over Image -->
+  <section id="projects" class="section overlay-section">
+    <div class="image-text-container">
+      <img src="https://cdn.pixabay.com/photo/2012/03/17/17/04/flowers-22802_1280.jpg" alt="Creative Work" />
+      <div class="overlay-text">Design is a Journey 🎨</div>
+    </div>
+  </section>
+
+  <!-- Paragraph with Hover Effect -->
+  <section class="section">
+    <h2>Hover Text</h2>
+    <p class="hover-p">Hover over this paragraph to see the magic ✨</p>
+  </section>
+
+  <!-- Image Overlay Fade -->
+  <section class="section">
+    <h2>Image Fade on Hover</h2>
+    <div class="fade-container">
+      <img src="https://cdn.pixabay.com/photo/2016/08/03/14/24/valentines-day-background-1566792_1280.jpg" alt="Overlay Image" class="fade-img"/>
+      <div class="fade-text">Malekah's Magic Touch 💖</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Malekah Tantoura. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
